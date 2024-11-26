@@ -1,12 +1,13 @@
+import classNames from "@classnames";
+import { JSX } from "preact";
 import { useState } from "preact/hooks";
-
-import clsxm from "../utils/clsxm.ts";
 
 export type LoadAwareImageProps =
   & {
     useSkeleton?: boolean;
     imgClassName?: string;
     blurClassName?: string;
+    objectFit?: string;
     alt: string;
   }
   & (
@@ -33,23 +34,24 @@ export default function LoadAwareImage({
   const [status, setStatus] = useState(
     useSkeleton ? "loading" : "complete",
   );
-  const widthIsSet = className?.includes("w-") ?? false;
+  const safeClassName = (className ?? "") as string;
+  const widthIsSet = safeClassName.includes("w-");
 
   return (
     <figure
       style={!widthIsSet ? { width: `${width}px` } : undefined}
-      className={className}
+      class={className}
     >
       <img
-        className={clsxm(
+        class={classNames(
           imgClassName,
-          status === "loading" && clsxm("animate-pulse", blurClassName),
+          { ["animate-pulse" + blurClassName]: status === "loading" },
         )}
         src={src}
         width={width}
         height={height}
         alt={alt}
-        onLoadingComplete={() => setStatus("complete")}
+        onLoad={() => setStatus("complete")}
         {...rest}
       />
     </figure>

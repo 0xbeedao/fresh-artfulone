@@ -1,64 +1,71 @@
+import classNames from "@classnames";
 import { JSX } from "preact";
-import clsx from 'clsx';
 
 type CardProps = {
-    className?: string;
-    //image type
-    image: string | JSX.Element;
-    title: string;
-    caption: string;
-    whatIdo?: boolean | undefined;
-  };
+  className?: string;
+  //image type
+  image: string | JSX.Element;
+  title: string;
+  caption: string;
+  whatIdo?: boolean | undefined;
+};
 
-  export function Card({ image, title, caption, whatIdo, className }: CardProps): JSX.Element {
-    return (
-        <div
-      className={clsx(
-        'relative pl-[18px] pr-4  xl:pb-[26px] bg-dark-200 rounded-xl  ml-0 xl:ml-auto ',
-        whatIdo
-          ? 'max-w-[260px] xl:max-w-[655px] pt-[26px] pb-[13px]'
-          : 'w-full py-6',
-        className
+export default function Card(
+  { image, title, caption, whatIdo, className }: CardProps,
+): JSX.Element {
+  return (
+    <div
+      className={classNames(
+        "relative pl-[18px] pr-4 xl:pb-[26px] bg-dark-200 rounded-xl ml-0 xl:ml-auto text-sm",
+        {
+          "max-w-[260px] xl:max-w-[655px] pt-[26px] pb-[13px]": whatIdo,
+          "w-full py-6": !whatIdo,
+        },
+        className,
       )}
     >
       <div
-        className={clsx(
-          'flex flex-col ',
-          whatIdo ? 'xl:flex-col' : 'xl:flex-row'
+        className={classNames(
+          "flex flex-col",
+          { "xl:flex-col": whatIdo, "xl:flex-row": !whatIdo },
         )}
       >
         <div
-          className={clsx(
-            'bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full mx-auto p-[2px] flex-shrink-0',
-            whatIdo
-              ? ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px] -mt-14 xl:-mt-16 xl:mb-4   '
-              : ' ml-auto h-[60px] w-[60px] xl:h-[72px] xl:w-[72px]  -mt-14 xl:my-auto xl:-ml-14'
+          className={classNames(
+            "bg-gradient-to-b from-leaf-500 to-ocean-500 rounded-full mx-auto p-[2px] flex-shrink-0",
+            {
+              "ml-auto h-[56px] w-[56px] xl:h-[72px] xl:w-[72px] -mt-14 xl:-mt-16 xl:mb-4":
+                whatIdo,
+              "ml-auto h-[56px] w-[56px] xl:h-[72px] xl:w-[72px] -mt-14 xl:my-auto xl:-ml-14":
+                !whatIdo,
+            },
           )}
         >
-          <div className='bg-dark-200 w-full h-full rounded-full flex items-center justify-center'>
-            <span className='text-3xl xl:text-5xl'>{image}</span>
+          <div className="bg-dark-200 w-full h-full flex items-center justify-center">
+            {image}
           </div>
         </div>
         <div
-          className={clsx(
-            'flex flex-col px-0 ',
-            whatIdo ? 'xl:px-5' : 'xl:px-5 xl:justify-center'
+          className={classNames(
+            "flex flex-col px-0",
+            { "xl:px-5": whatIdo, "xl:px-5 xl:justify-center": !whatIdo },
           )}
         >
           <h4
-            className={clsx(
-              'text-white text-sm leading-6 xl:leading-normal mt-2 xl:mt-0 text-center  font-bold ',
-              whatIdo
-                ? ' xl:text-base xl:text-center'
-                : ' xl:text-3xl xl:mb-2 xl:text-left'
+            className={classNames(
+              "text-white text-sm leading-6 xl:leading-normal mt-2 xl:mt-0 text-center font-bold",
+              {
+                "xl:text-base xl:text-center": whatIdo,
+                "xl:text-3xl xl:mb-2 xl:text-left": !whatIdo,
+              },
             )}
           >
             {title}
           </h4>
           <p
-            className={clsx(
-              'text-gray-300 text-center xl:text-left text-sm  leading-6  xl:leading-normal',
-              whatIdo ? ' xl:text-sm xl:text-center' : 'xl:text-lg'
+            className={classNames(
+              "text-gray-300 text-center xl:text-left text-sm leading-6 xl:leading-normal",
+              { "xl:text-sm xl:text-center": whatIdo, "xl:text-lg": !whatIdo },
             )}
           >
             {caption}
@@ -67,4 +74,4 @@ type CardProps = {
       </div>
     </div>
   );
-  }
+}

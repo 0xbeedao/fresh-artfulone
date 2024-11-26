@@ -5,10 +5,10 @@ export default function App({ Component }: PageProps) {
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>fresh-artfulone</title>
+        <title>Artful One</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body>
+      <body class="flex h-full bg-zinc-50 dark:bg-black">
         <Component />
       </body>
     </html>
