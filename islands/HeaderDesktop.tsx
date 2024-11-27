@@ -1,15 +1,10 @@
 import classNames from "@classnames";
 import UnstyledLink from "@components/links/UnstyledLink.tsx";
+import { headerLinks } from "@config/SiteConfig.ts";
 import { IS_BROWSER } from "$fresh/runtime.ts";
 import { JSX } from "preact";
 import { useEffect, useState } from "preact/hooks";
 
-const LINKS = [
-  { href: "/about", text: "About" },
-  // { href: "/art", text: "Art" },
-  // { href: "/portfolio", text: "Coding" },
-  // { href: "/writing", text: "Writing" },
-];
 export default function HeaderDesktop(): JSX.Element {
   if (!IS_BROWSER) {
     return <></>;
@@ -56,7 +51,7 @@ export default function HeaderDesktop(): JSX.Element {
           <UnstyledLink href="/">
             <p class="font-bold text-2xl">Bruce</p>
           </UnstyledLink>
-          {LINKS.map(({ href, text }) => (
+          {headerLinks.map(({ href, text }) => (
             <UnstyledLink
               className="aria-[current]:text-white text-gray-500 [aria-current]:text-white"
               href={href}

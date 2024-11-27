@@ -10,13 +10,13 @@ export type UnstyledLinkProps = {
 export default function UnstyledLink({
   children,
   href,
-  openNewTab,
+  openNewTab = false,
   className,
   ...rest
 }: UnstyledLinkProps) {
-  if ((!!openNewTab) || isNewTabRef(href as string)) {
+  if ((!openNewTab) || isNewTabRef(href as string)) {
     return (
-      <a {...rest} class={className}>
+      <a {...rest} href={href} class={className}>
         {children}
       </a>
     );
@@ -39,5 +39,10 @@ export default function UnstyledLink({
 }
 
 function isNewTabRef(href: string) {
+  console.log(
+    "is tab ref",
+    href,
+    !href.startsWith("/") && !href.startsWith("#"),
+  );
   return !href.startsWith("/") && !href.startsWith("#");
 }

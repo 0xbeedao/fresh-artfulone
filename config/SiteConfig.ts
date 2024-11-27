@@ -1,9 +1,9 @@
-export interface FooterLink {
+export interface SimpleLink {
   href: string;
   text: string;
 }
 
-export const footerLinks: FooterLink[] = [
+export const footerLinks: SimpleLink[] = [
   {
     href: "https://raidguild.org/",
     text: "Raid Guild",
@@ -12,6 +12,13 @@ export const footerLinks: FooterLink[] = [
     href: "https://www.etsy.com/shop/PioneerMoon",
     text: "Pioneer Moon",
   },
+];
+
+export const headerLinks: SimpleLink[] = [
+  { href: "/about", text: "About" },
+  { href: "/art", text: "Art" },
+  // { href: "/portfolio", text: "Coding" },
+  // { href: "/writing", text: "Writing" },
 ];
 
 export interface Social {
