@@ -23,6 +23,7 @@
   "imports": {
     "@": "./",
     "@components/": "./components/",
+    "@config/": "./config/",
     "@classnames": "https://deno.land/x/classnames@0.1.1/index.ts",
     "@hooks/": "./hooks/",
     "@islands/": "./islands/",

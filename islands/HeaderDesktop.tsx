@@ -41,7 +41,7 @@ export default function HeaderDesktop(): JSX.Element {
     >
       <header
         class={classNames(
-          "max-w-screen-xl px-[70px] mx-auto flex flex-col text-white  transition-all",
+          "max-w-screen-xl px-[70px] mx-auto flex flex-col text-white transition-all",
           { "pt-7 pb-1": offset !== 0 },
           { "pt-[32px] pb-[12px]": offset === 0 },
         )}
@@ -58,7 +58,7 @@ export default function HeaderDesktop(): JSX.Element {
           </UnstyledLink>
           {LINKS.map(({ href, text }) => (
             <UnstyledLink
-              className="aria-[current]:text-white text-gray-500"
+              className="aria-[current]:text-white text-gray-500 [aria-current]:text-white"
               href={href}
             >
               {text}

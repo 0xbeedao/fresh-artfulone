@@ -19,7 +19,7 @@ export default function Button(
         "border ",
         "focus:outline-none focus-visible:text-primary-400",
         {
-          "bg-dark-200 text-gray-300 border-dark-200 hover:bg-dark-100 hover:text-gray-200 hover:border-dark-100":
+          "bg-zinc-800 text-gray-300 border-dark-200 hover:bg-zinc-100 hover:text-gray-200 hover:border-dark-100":
             variant === "primary",
           "bg-white text-dark hover:bg-gray-200 hover:text-dark focus-visible:text-dark":
             variant === "secondary",

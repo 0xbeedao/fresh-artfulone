@@ -28,7 +28,10 @@ export default function UnstyledLink({
       rel="noopener noreferrer"
       href={href}
       {...rest}
-      class={classNames(className, "cursor-[ne-resize]")}
+      class={classNames(
+        className,
+        "hover:text-orange-500",
+      )}
     >
       {children}
     </a>

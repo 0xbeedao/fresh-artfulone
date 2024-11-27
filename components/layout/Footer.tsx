@@ -1,5 +1,6 @@
 import SocialIcon from "@components/icons/SocialIcon.tsx";
 import UnstyledLink from "@components/links/UnstyledLink.tsx";
+import { footerLinks, socials } from "@config/SiteConfig.ts";
 import { JSX } from "preact";
 
 export default function Footer(): JSX.Element {
@@ -27,7 +28,7 @@ function FooterLinks() {
       {footerLinks.map(({ href, text }) => (
         <UnstyledLink
           key={href}
-          className="text-sm font-medium rounded-sm text-gray-300 dark:text-gray-300 animated-underline focus:outline-none focus-visible:ring focus-visible:ring-primary-300"
+          className="text-sm font-medium rounded-sm text-gray-300 dark:text-gray-300 animated-underline focus:outline-none focus-visible:ring focus-visible:ring-primary-300  hover:text-orange-500"
           href={href}
         >
           {text}
@@ -50,45 +51,10 @@ function SocialLinks() {
         >
           <SocialIcon
             icon={social.icon}
-            className="w-6 h-6 my-auto text-gray-300 align-middle transition-colors dark:text-gray-300 hover:text-primary-300 dark:hover:text-primary-300"
+            className="w-6 h-6 text-gray-300 align-middle transition-colors"
           />
         </UnstyledLink>
       ))}
     </div>
   );
 }
-
-const footerLinks = [
-  {
-    href: "https://raidguild.org/",
-    text: "Raid Guild",
-  },
-  {
-    href: "https://www.etsy.com/shop/PioneerMoon",
-    text: "Pioneer Moon",
-  },
-];
-
-interface Social {
-  href: string;
-  icon: string;
-  text: string;
-}
-
-const socials: Social[] = [
-  {
-    href: "https://github.com/0xbigbee",
-    icon: "github",
-    text: "Github",
-  },
-  {
-    href: "https://www.linkedin.com/in/bkroeze/",
-    icon: "linkedin",
-    text: "Linkedin",
-  },
-  {
-    href: "https://twitter.com/cryptoarchon",
-    icon: "twitter",
-    text: "Twitter",
-  },
-];

@@ -28,7 +28,7 @@ export default function Hero(): JSX.Element {
           </div>
         </div>
         <div class="hidden xl:flex flex-col  py-5 pl-9 pr-2 col-span-full xl:col-span-7 xl:col-start-6">
-          <div class="bg-dark-200 rounded-xl py-5 space-y-5 xl:space-y-0 flex flex-col xl:flex-row px-0 xl:px-10 gap-0 xl:gap-6">
+          <div class="bg-zinc-800 rounded-xl py-5 space-y-5 xl:space-y-0 flex flex-col xl:flex-row px-0 xl:px-10 gap-0 xl:gap-6">
             <div class="flex flex-col  pl-[34px] xl:px-0 pr-1 relative ">
               <div class="flex">
                 <p class="text-4xl mr-3">😀</p>
@@ -72,7 +72,7 @@ export default function Hero(): JSX.Element {
               </div>
             </div>
           </div>
-          <button class="bg-dark-200 px-6 py-3 text-gray-300 flex items-center leading-6 rounded-xl mt-4">
+          <button class="bg-zinc-800 px-6 py-3 text-gray-300 flex items-center leading-6 rounded-xl mt-4">
             <IconifyIcon icon="heroicons-solid:menu" className="h-5 w-5 mr-5" />
             Baca Selengkapnya
           </button>

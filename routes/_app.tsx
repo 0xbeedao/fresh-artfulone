@@ -8,7 +8,7 @@ export default function App({ Component }: PageProps) {
         <title>Artful One</title>
         <link rel="stylesheet" href="/styles.css" />
       </head>
-      <body class="flex h-full bg-zinc-50 dark:bg-black">
+      <body class="flex h-full bg-zinc-900 dark:bg-black">
         <Component />
       </body>
     </html>

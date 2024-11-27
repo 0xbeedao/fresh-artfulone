@@ -8,7 +8,7 @@ export default function Weeks(): JSX.Element {
     <Section name="weeks" className="block xl:hidden">
       <Grid>
         <div class="flex flex-col  py-5 pl-9 pr-2 col-span-full">
-          <div class="bg-dark-200 rounded-xl py-5 space-y-5">
+          <div class="bg-zinc-800 rounded-xl py-5 space-y-5">
             <div class="flex flex-col  pl-[34px] pr-1 relative ">
               <h3 class="text-white font-semibold text-lg">
                 Minggu Pertama
@@ -40,7 +40,7 @@ export default function Weeks(): JSX.Element {
               <div class="absolute top-[15%] -left-7 text-[40px]">😃</div>
             </div>
           </div>
-          <button class="bg-dark-200 px-6 py-3 text-gray-300 flex items-center leading-6 rounded-xl mt-4">
+          <button class="bg-zinc-800 px-6 py-3 text-gray-300 flex items-center leading-6 rounded-xl mt-4">
             <IconifyIcon icon="heroicons-solid:menu" className="h-5 w-5 mr-5" />
             Baca Selengkapnya
           </button>

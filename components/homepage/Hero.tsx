@@ -1,14 +1,32 @@
 import Container from "@components/common/Container.tsx";
 import Grid from "@components/common/Grid.tsx";
 import Section from "@components/common/Section.tsx";
+import SocialIcon from "@components/icons/SocialIcon.tsx";
 import UnstyledLink from "@components/links/UnstyledLink.tsx";
-import GithubIcon from "@icons.church/ri/github-fill";
-import LinkedInIcon from "@icons.church/ri/linkedin-box-fill";
-import TwitterIcon from "@icons.church/ri/twitter-x-fill";
+import { socials } from "@config/SiteConfig.ts";
 import LoadAwareImage from "@islands/LoadAwareImage.tsx";
 import type { JSX } from "preact";
 
 const HERO_IMG = "/image/homepage/bruce_eye_cam.png";
+
+function SocialLinks() {
+  return (
+    <div class="flex  space-x-4 mt-0 xl:mt-3">
+      {socials.map((social) => (
+        <UnstyledLink
+          key={social.text}
+          href={social.href}
+          openNewTab
+        >
+          <SocialIcon
+            icon={social.icon}
+            className="text-white h-6 w-6"
+          />
+        </UnstyledLink>
+      ))}
+    </div>
+  );
+}
 
 export default function Hero(): JSX.Element {
   return (
@@ -19,8 +37,8 @@ export default function Hero(): JSX.Element {
       <Container>
         <Grid>
           <div class="col-span-2 col-start-2 xl:col-start-1 xl:col-span-full flex flex-col xl:flex-row justify-center xl:justify-start items-center xl:pt-[70px]">
-            <div class="w-[259px] h-[287px] xl:w-294[px] xl:h-[322px] rounded-full bg-gradient-hero p-[6px] xl:mr-9">
-              <div class="h-full w-full rounded-full bg-dark-100 flex justify-center items-center">
+            <div class="w-[259px] h-[287px] xl:w-294[px] xl:h-[322px] p-[6px] xl:mr-9">
+              <div class="h-full w-full flex justify-center items-center">
                 <div class="relative h-[263px] w-[200px]">
                   <LoadAwareImage
                     src={HERO_IMG}
@@ -59,17 +77,7 @@ export default function Hero(): JSX.Element {
                 <h4 class="hidden xl:block text-white  text-3xl font-semibold text-left">
                   Lets connect
                 </h4>
-                <div class="flex  space-x-4 mt-0 xl:mt-3">
-                  <UnstyledLink href="https://www.linkedin.com/brucekroeze">
-                    <LinkedInIcon className="text-white h-6 w-6" />
-                  </UnstyledLink>
-                  <UnstyledLink href="https://twitter.com/bkroeze">
-                    <TwitterIcon className="text-white h-6 w-6" />
-                  </UnstyledLink>
-                  <UnstyledLink href="https://github.com/0xbigbee">
-                    <GithubIcon className="text-white h-6 w-6" />
-                  </UnstyledLink>
-                </div>
+                <SocialLinks />
               </div>
             </div>
           </div>

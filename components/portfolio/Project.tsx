@@ -33,8 +33,8 @@ export default function Project({
             {category}
           </h6>
           <div class="w-full h-auto mb-5 xl:w-5/12">
-            <div class="bg-dark-200 relative flex flex-col px-4">
-              <button class="h-6 w-6 lg:h-9 lg:w-9 flex items-center justify-center rounded bg-dark-300 mt-2 lg:mt-4 ml-auto">
+            <div class="bg-zinc-800 relative flex flex-col px-4">
+              <button class="h-6 w-6 lg:h-9 lg:w-9 flex items-center justify-center rounded bg-zinc-700 mt-2 lg:mt-4 ml-auto">
                 <ArrowUpIcon className="h-4 w-4 lg:h-5 lg:aspect-w-9 transform rotate-45 text-gray-100" />
               </button>
               <div class="flex flex-col px-2 h-72 overflow-hidden">
