@@ -39,7 +39,7 @@ export const socials: Social[] = [
     text: "Twitter",
   },
   {
-    href: "https://github.com/0xbigbee",
+    href: "https://github.com/0xbeedao",
     icon: "github",
     text: "Github",
   },
