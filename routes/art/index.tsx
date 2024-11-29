@@ -12,13 +12,11 @@ export default function ArtIndex({ url }: PageProps) {
         interested in doing sculptures and castings. Lately, my favorite is to
         use concrete and glass.
       </p>
-      <p class="mt-2">
-        I'll add more projects here as I write them up, but for now, enjoy my
-        {" "}
+      <div class="mt-3 bg-zinc-700 p-3 rounded-lg">
         <UnstyledLink href="/art/octagon" className="underline">
           Octagonal Sculpture and Materials Calculator
         </UnstyledLink>
-      </p>
+      </div>
     </div>
   );
 }

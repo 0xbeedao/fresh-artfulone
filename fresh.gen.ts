@@ -10,6 +10,7 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $art_index from "./routes/art/index.tsx";
 import * as $art_octagon_calculator from "./routes/art/octagon-calculator.tsx";
 import * as $art_octagon from "./routes/art/octagon.tsx";
+import * as $coding_index from "./routes/coding/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
@@ -30,6 +31,7 @@ const manifest = {
     "./routes/art/index.tsx": $art_index,
     "./routes/art/octagon-calculator.tsx": $art_octagon_calculator,
     "./routes/art/octagon.tsx": $art_octagon,
+    "./routes/coding/index.tsx": $coding_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
   },
