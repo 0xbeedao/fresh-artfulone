@@ -2,6 +2,7 @@
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "compile-sketches": "deno bundle contents/sketches/*.ts static/sketches/",
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
     "start": "deno run -A --watch=static/,routes/ dev.ts",
@@ -26,8 +27,9 @@
     "@config/": "./config/",
     "@classnames": "https://deno.land/x/classnames@0.1.1/index.ts",
     "@hooks/": "./hooks/",
+    "@lib/": "./lib/",
     "@islands/": "./islands/",
-    "@utils/": "./utils/",
+    "@utils/": "./lib/utils/",
     "@static/": "./static/",
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@std/collections": "jsr:@std/collections@^1.0.9",

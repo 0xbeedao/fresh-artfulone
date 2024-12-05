@@ -75,7 +75,6 @@ export default function Seo(props: SeoProps) {
         name="msapplication-TileImage"
         content="/favicon/ms-icon-144x144.png"
       />
-      <meta name="theme-color" content="#ffffff" />
     </Head>
   );
 }

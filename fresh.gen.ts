@@ -10,6 +10,7 @@ import * as $api_joke from "./routes/api/joke.ts";
 import * as $art_index from "./routes/art/index.tsx";
 import * as $art_octagon_calculator from "./routes/art/octagon-calculator.tsx";
 import * as $art_octagon from "./routes/art/octagon.tsx";
+import * as $art_procedural_sketch_ from "./routes/art/procedural/[sketch].tsx";
 import * as $coding_index from "./routes/coding/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
@@ -18,6 +19,7 @@ import * as $HeaderDesktop from "./islands/HeaderDesktop.tsx";
 import * as $HeaderMobile from "./islands/HeaderMobile.tsx";
 import * as $LoadAwareImage from "./islands/LoadAwareImage.tsx";
 import * as $OctagonCalculator from "./islands/OctagonCalculator.tsx";
+import * as $ProcessingSketch from "./islands/ProcessingSketch.tsx";
 import * as $ResponsiveHeader from "./islands/ResponsiveHeader.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -31,6 +33,7 @@ const manifest = {
     "./routes/art/index.tsx": $art_index,
     "./routes/art/octagon-calculator.tsx": $art_octagon_calculator,
     "./routes/art/octagon.tsx": $art_octagon,
+    "./routes/art/procedural/[sketch].tsx": $art_procedural_sketch_,
     "./routes/coding/index.tsx": $coding_index,
     "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
@@ -41,6 +44,7 @@ const manifest = {
     "./islands/HeaderMobile.tsx": $HeaderMobile,
     "./islands/LoadAwareImage.tsx": $LoadAwareImage,
     "./islands/OctagonCalculator.tsx": $OctagonCalculator,
+    "./islands/ProcessingSketch.tsx": $ProcessingSketch,
     "./islands/ResponsiveHeader.tsx": $ResponsiveHeader,
   },
   baseUrl: import.meta.url,
