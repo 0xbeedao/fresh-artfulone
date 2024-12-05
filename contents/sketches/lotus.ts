@@ -1,137 +1,7 @@
+import { chromatomeColors } from "./lib/colors.ts";
+
 let colors: any;
 let span: number;
-
-// --- utils
-
-interface RingStackOptions {
-  background?: string;
-  stroke?: string;
-}
-
-class RingStack {
-  series: string[];
-  options: RingStackOptions;
-  index: number;
-
-  constructor(series: string[], options: RingStackOptions = {}) {
-    this.series = series;
-    this.options = options;
-    this.index = -1;
-  }
-
-  burn(index: number = -1): string {
-    let burnIx = index === -1 ? this.index : index % this.series.length;
-    if (burnIx === -1) {
-      burnIx = 0;
-    }
-    const val = this.series[burnIx];
-    const trimmed: string[] = [];
-    this.series.forEach((c, ix) => {
-      if (ix !== burnIx) {
-        trimmed.push(c);
-      }
-    });
-    this.series = trimmed;
-    this.reset(index);
-    return val;
-  }
-
-  burnRandom(): string {
-    const index = Math.floor(Math.random() * this.series.length);
-    return this.burn(index);
-  }
-
-  duplicate(): RingStack {
-    return new RingStack(this.series);
-  }
-
-  dict(names: string[]): Map<string, string[]> {
-    const ret: Map<string, string[]> = new Map();
-    names.forEach((_, ix) => {
-      const key: string = names[ix];
-      const vals: string[] = key === "bg" ? [this.background()] : this.next();
-      ret.set(key, vals);
-    });
-    return ret;
-  }
-
-  get(index?: number): string {
-    if (index === undefined) {
-      return this.get(this.index);
-    }
-    return this.series[index % this.series.length];
-  }
-
-  next(count: number = 1): string[] {
-    this.reset(this.index + 1);
-    if (count === 1) {
-      return [this.get(this.index)];
-    }
-    const ret: string[] = [];
-    for (let i = 0; i < count; i++) {
-      ret.push(this.get(this.index + i));
-    }
-    return ret;
-  }
-
-  random(): string {
-    const index = Math.floor(Math.random() * this.series.length);
-    return this.series[index];
-  }
-
-  reset(ix: number = 0): this {
-    this.index = ix % this.series.length;
-    return this;
-  }
-
-  shuffle(): this {
-    this.series = this.series.sort(() => Math.random() - 0.5);
-    return this;
-  }
-
-  background(): string {
-    if (!this.options.background) {
-      this.options.background = this.burnRandom();
-    }
-    return this.options.background;
-  }
-}
-
-class ColorStack extends RingStack {
-  override duplicate(): ColorStack {
-    return new ColorStack(this.series);
-  }
-
-  override background(): string {
-    if (!this.options.background) {
-      this.options.background = this.burnRandom();
-    }
-    return this.options.background;
-  }
-
-  stroke(): string {
-    if (!this.options.stroke) {
-      this.options.stroke = this.burnRandom();
-    }
-    return this.options.stroke;
-  }
-
-  nextWithOpacity(opacity: number): string {
-    const val = this.next()[0];
-    const r = val.slice(1, 3);
-    const g = val.slice(3, 5);
-    const b = val.slice(5, 7);
-    const rgba = `rgba(${parseInt(r, 16)}, ${parseInt(g, 16)}, ${
-      parseInt(b, 16)
-    }, ${opacity})`;
-    return rgba;
-  }
-}
-
-function chromatoneColors(pallette?: string): ColorStack {
-  const chroma = chromotome.get(pallette);
-  return new ColorStack(chroma.colors, chroma);
-}
 
 // --- drawing funcs
 
@@ -157,12 +27,12 @@ function SawTooth(
 let usableHeight = 500;
 let usableWidth = 500;
 
-function setup(): void {
+export function setup(): void {
   const square = min(windowHeight - 250, windowWidth - 100);
   usableHeight = square;
   usableWidth = square;
   createCanvas(usableWidth, usableHeight);
-  colors = chromatoneColors();
+  colors = chromatomeColors();
   background(colors.background());
   const smaller: number = min(usableHeight, usableWidth);
   span = smaller / 4.25;
@@ -172,7 +42,7 @@ function setup(): void {
 
 let running: boolean = true;
 
-function keyPressed(code: number): void {
+export function keyPressed(code: number): void {
   console.log("code", code);
   if (!running) {
     running = true;
@@ -212,7 +82,7 @@ function Lotus(
   pop();
 }
 
-function drawAll(color: string, span: number, r: number): void {
+export function drawAll(color: string, span: number, r: number): void {
   let s1 = colors.next();
   let fg1 = colors.next();
   let fg2 = colors.next();
@@ -242,7 +112,7 @@ function drawAll(color: string, span: number, r: number): void {
   }
 }
 
-function draw(): void {
+export function draw(): void {
   clear();
   colors.reset();
   translate(usableWidth / 2, usableHeight / 2);

@@ -2,10 +2,10 @@
   "lock": false,
   "tasks": {
     "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
-    "compile-sketches": "deno bundle contents/sketches/*.ts static/sketches/",
+    "compile-sketches": "node_modules/.bin/esbuild.cmd --bundle contents/sketches/*ts --outdir=static/sketches/ && deno --allow-read=. --allow-write clean_sketches.ts",
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
-    "start": "deno run -A --watch=static/,routes/ dev.ts",
+    "start": "deno task compile-sketches && deno run -A --watch=static/,routes/ dev.ts",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
@@ -35,6 +35,7 @@
     "@std/collections": "jsr:@std/collections@^1.0.9",
     "@icons.church/": "https://icons.church/",
     "daisyui": "npm:daisyui@^4.12.14",
+    "esbuild": "npm:esbuild@^0.24.0",
     "preact": "https://esm.sh/preact@10.22.0",
     "preact-media-hook": "npm:preact-media-hook@^1.0.3",
     "preact/": "https://esm.sh/preact@10.22.0/",

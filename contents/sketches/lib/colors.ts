@@ -1,6 +1,6 @@
 // Language: javascript
 // Needs: https://unpkg.com/chromotome@1.19.1/dist/index.umd.js
-class RingStack {
+export class RingStack {
 	constructor(series, options = {}) {
 		this.series = series;
 		this.options = options;
@@ -77,7 +77,7 @@ class RingStack {
 	}
 }
 
-class ColorStack extends RingStack {
+export class ColorStack extends RingStack {
 	duplicate() {
 		return new ColorStack(this.series);
 	}
@@ -108,7 +108,7 @@ class ColorStack extends RingStack {
 	}
 }
 
-function chromatomeColors(pallette) {
+export function chromatomeColors(pallette) {
 	const chroma = chromotome.get(pallette);
 	return new ColorStack(chroma.colors, chroma);
 }
