@@ -17,6 +17,11 @@ export default function ArtIndex({ url }: PageProps) {
           Octagonal Sculpture and Materials Calculator
         </UnstyledLink>
       </div>
+      <div class="mt-3 bg-zinc-700 p-3 rounded-lg">
+        <UnstyledLink href="/art/procedural/lotus" className="underline">
+          Animated Digital Lotus
+        </UnstyledLink>
+      </div>
     </div>
   );
 }

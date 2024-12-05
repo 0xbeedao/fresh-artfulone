@@ -185,4 +185,3 @@
     translate(usableWidth / 2, usableHeight / 2);
     drawAll(color, span, frameCount % (40 * PI));
   }
-})();
