@@ -1,5 +1,5 @@
 import Footer from "@components/layout/Footer.tsx";
-import HeaderDesktop from "@islands/HeaderDesktop.tsx";
+import HeaderDesktop from "@components/layout/HeaderDesktop.tsx";
 import { Head, Partial } from "$fresh/runtime.ts";
 import { PageProps } from "$fresh/server.ts";
 import { JSX } from "preact";
@@ -46,7 +46,7 @@ export default function Layout(
         <HeaderDesktop />
         <main
           id="main"
-          class="px-[70px] max-w-md mx-auto xl:max-w-screen-xl w-full pt-12 xl:pt-[20px]"
+          class="px-[70px] max-w-md mx-auto xl:max-w-screen-xl w-full pt-12 xl:pt-[20px] mt-[52px]"
         >
           <Partial key="main" name="main">
             <Component />

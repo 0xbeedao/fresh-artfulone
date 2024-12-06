@@ -28,10 +28,14 @@ let usableHeight = 500;
 let usableWidth = 500;
 
 export function setup(): void {
-  const square = min(windowHeight - 250, windowWidth - 100);
-  usableHeight = square;
-  usableWidth = square;
-  createCanvas(usableWidth, usableHeight);
+  const canvasElement = document.getElementById("lotus");
+  if (canvasElement) {
+    usableHeight = parseInt(canvasElement.height, 10);
+    usableWidth = parseInt(canvasElement.width, 10);
+  }
+  console.table({ usableHeight, usableWidth });
+  console.log("canvasElement", canvasElement);
+  createCanvas(usableWidth, usableHeight, canvasElement);
   colors = chromatomeColors();
   background(colors.background());
   const smaller: number = min(usableHeight, usableWidth);
@@ -117,4 +121,11 @@ export function draw(): void {
   colors.reset();
   translate(usableWidth / 2, usableHeight / 2);
   drawAll(color, span, frameCount % (40 * PI));
+}
+
+export function mousePressed() {
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+  }
 }

@@ -18,7 +18,7 @@ export default function SketchPage(props: PageProps) {
         <script src="https://unpkg.com/chromotome@1.19.1/dist/index.umd.js">
         </script>
       </Head>
-      <div class="w-full px-[70px] mx-auto max-w-screen pt-10 xl:pt-[120px]">
+      <div class="xl:pt-[10px]">
         <ProcessingSketch sketch={sketchUrl} />
       </div>
     </>

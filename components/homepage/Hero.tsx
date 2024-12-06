@@ -32,7 +32,7 @@ export default function Hero(): JSX.Element {
   return (
     <Section
       name="hero"
-      className="w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl pt-10 xl:pt-[60px]"
+      className="w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl xl:pt-[10px]"
     >
       <Container>
         <Grid>

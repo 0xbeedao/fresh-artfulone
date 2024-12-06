@@ -15,7 +15,6 @@ import * as $coding_index from "./routes/coding/index.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
-import * as $HeaderDesktop from "./islands/HeaderDesktop.tsx";
 import * as $HeaderMobile from "./islands/HeaderMobile.tsx";
 import * as $LoadAwareImage from "./islands/LoadAwareImage.tsx";
 import * as $OctagonCalculator from "./islands/OctagonCalculator.tsx";
@@ -40,7 +39,6 @@ const manifest = {
   },
   islands: {
     "./islands/Counter.tsx": $Counter,
-    "./islands/HeaderDesktop.tsx": $HeaderDesktop,
     "./islands/HeaderMobile.tsx": $HeaderMobile,
     "./islands/LoadAwareImage.tsx": $LoadAwareImage,
     "./islands/OctagonCalculator.tsx": $OctagonCalculator,

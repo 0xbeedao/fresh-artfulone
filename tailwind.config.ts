@@ -16,6 +16,10 @@ export default {
           500: "#4ca9ff", // Example color
         },
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        sora: ["Sora", "sans-serif"],
+      },
     },
   },
 } satisfies Config;

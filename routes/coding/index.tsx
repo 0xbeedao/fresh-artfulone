@@ -4,7 +4,7 @@ import type { PageProps } from "$fresh/server.ts";
 
 export default function CodingIndex({ url }: PageProps) {
   return (
-    <div class="w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl pt-10 xl:pt-[120px]">
+    <div class="w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl xl:pt-[10px]">
       <Seo url={url.toString()} templateTitle="Coding" />
       <h1 class="text-white text-3xl font-semibold mt-20">Coding Projects</h1>
       <p class="mt-3">
