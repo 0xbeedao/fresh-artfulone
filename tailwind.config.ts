@@ -17,8 +17,8 @@ export default {
         },
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        sora: ["Sora", "sans-serif"],
+        inter: ['Inter', 'sans-serif'],
+        sora: ['Sora', 'sans-serif'],
       },
     },
   },

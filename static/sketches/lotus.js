@@ -93,6 +93,9 @@
     }
   };
   function chromatomeColors(pallette) {
+    if (!pallette) {
+      return new ColorStack(chromotome.getRandom().colors);
+    }
     const chroma = chromotome.get(pallette);
     return new ColorStack(chroma.colors, chroma);
   }

@@ -108,7 +108,10 @@ export class ColorStack extends RingStack {
 	}
 }
 
-export function chromatomeColors(pallette) {
+export function chromatomeColors(pallette?: string) {
+	if (!pallette) {
+		return new ColorStack(chromotome.getRandom().colors);
+	}
 	const chroma = chromotome.get(pallette);
 	return new ColorStack(chroma.colors, chroma);
 }
