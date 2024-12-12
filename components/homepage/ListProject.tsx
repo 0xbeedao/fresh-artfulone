@@ -12,7 +12,9 @@ export default function ListProject({ posts }: { posts: ProjectPostProps[] }) {
     <Section name="project-list" className="mt-20 xl:mt-36">
       <Grid className="w-full">
         <div class="col-span-5">
-          <h2 class="text-5xl font-bold text-white">Featured Project</h2>
+          <h2 class="text-5xl font-bold dark:text-gray-100 text-gray-900">
+            Featured Project
+          </h2>
         </div>
         {postList}
         <div class="col-span-2 my-4 xl:my-0">

@@ -20,7 +20,7 @@ export default function Nav(): JSX.Element {
             <li key={`${href}${label}`}>
               <UnstyledLink
                 href={href}
-                class="text-white hover:text-green-400"
+                class="dark:text-gray-100 text-gray-900 hover:text-green-400"
               >
                 {label}
               </UnstyledLink>

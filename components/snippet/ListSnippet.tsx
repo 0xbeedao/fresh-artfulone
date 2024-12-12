@@ -10,7 +10,7 @@ export default function ListSnippet({ posts }: SnippetProps): JSX.Element {
   return (
     <Section name="list-snippet">
       <Grid className="pt-5 gap-y-5 xl:gap-y-0">
-        <div class="hidden xl:block text-white  col-span-full mb-6">
+        <div class="hidden xl:block dark:text-gray-100 text-gray-900  col-span-full mb-6">
           Search code snippet
         </div>
         <label class="block col-span-full relative">

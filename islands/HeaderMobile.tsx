@@ -27,20 +27,20 @@ export default function HeaderMobile() {
     >
       <div class="grid grid-cols-4 gap-4 pl-[18px] pr-[19px] pt-[17px] pb-4 max-w-screen-sm mx-auto">
         <UnstyledLink href="/" className="flex flex-col items-center">
-          <ClipboardCheckIcon class="h-5 w-5 aria-[current]:text-white text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <ClipboardCheckIcon class="h-5 w-5 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500" />
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Home
           </p>
         </UnstyledLink>
         <UnstyledLink className="flex flex-col items-center" href="/mentorship">
-          <ClipboardCheckIcon class="h-5 w-5 aria-[current]:text-white text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <ClipboardCheckIcon class="h-5 w-5 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500" />
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Mentorship
           </p>
         </UnstyledLink>
         <UnstyledLink className="flex flex-col items-center" href="/portofolio">
-          <ArchiveIcon class="h-5 w-5 aria-[current]:text-white text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <ArchiveIcon class="h-5 w-5 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500" />
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Portfolio
           </p>
         </UnstyledLink>
@@ -51,10 +51,10 @@ export default function HeaderMobile() {
         >
           {isMore
             ? (
-              <CodeIcon class="h-5 w-5 aria-[current]:text-white text-gray-500" />
+              <CodeIcon class="h-5 w-5 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500" />
             )
             : <DotsVerticalIcon class="h-5 w-5 text-gray-500" />}
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             {isMore ? "Snippet" : "More"}
           </p>
         </UnstyledLink>
@@ -62,7 +62,7 @@ export default function HeaderMobile() {
       <div class="grid grid-cols-4 gap-4 pl-[18px] pr-[19px] pt-[17px] pb-4">
         <UnstyledLink href="/support" className="flex flex-col items-center">
           <CurrencyDollarIcon class="h-5 w-5 text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Support
           </p>
         </UnstyledLink>
@@ -71,13 +71,13 @@ export default function HeaderMobile() {
           className="flex flex-col items-center"
         >
           <BookmarkIcon class="h-5 w-5 text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Blog
           </p>
         </UnstyledLink>
         <UnstyledLink href="/contact" className="flex flex-col items-center">
           <ChatIcon class="h-5 w-5 text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Contact
           </p>
         </UnstyledLink>
@@ -86,7 +86,7 @@ export default function HeaderMobile() {
           onClick={() => setIsMore(!isMore)}
         >
           <DotsVerticalIcon class="h-5 w-5 text-gray-500" />
-          <p class="text-sm mt-1 aria-[current]:text-white text-gray-500">
+          <p class="text-sm mt-1 aria-[current]:dark:text-gray-100 text-gray-900 text-gray-500">
             Less
           </p>
         </div>

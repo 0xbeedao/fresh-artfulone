@@ -8,7 +8,7 @@ export default function Hero(): JSX.Element {
     <Section name="hero-mentorship" className="w-full pt-6 xl:pt-[200px]">
       <Grid>
         <div class="col-span-full xl:col-span-5 flex flex-col">
-          <h1 class="text-white text-2xl text-center mb-4 xl:mb-10 xl:text-5xl  font-bold">
+          <h1 class="dark:text-gray-100 text-gray-900 text-2xl text-center mb-4 xl:mb-10 xl:text-5xl  font-bold">
             Mentorship
           </h1>
           <hr class="text-gray-400 my-2 block xl:hidden" />
@@ -32,7 +32,7 @@ export default function Hero(): JSX.Element {
             <div class="flex flex-col  pl-[34px] xl:px-0 pr-1 relative ">
               <div class="flex">
                 <p class="text-4xl mr-3">😀</p>
-                <h3 class="text-white font-semibold text-lg break-words">
+                <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg break-words">
                   Minggu Pertama
                 </h3>
               </div>
@@ -46,7 +46,7 @@ export default function Hero(): JSX.Element {
             <div class="flex flex-col  pl-[34px] xl:px-0 pr-1 relative ">
               <div class="flex">
                 <p class="text-4xl mr-3">😗</p>
-                <h3 class="text-white font-semibold text-lg break-words">
+                <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg break-words">
                   Minggu Kedua
                 </h3>
               </div>
@@ -60,7 +60,7 @@ export default function Hero(): JSX.Element {
             <div class="flex flex-col  pl-[34px] xl:px-0 pr-1 relative ">
               <div class="flex">
                 <p class="text-4xl mr-3">🥰</p>
-                <h3 class="text-white font-semibold text-lg break-words">
+                <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg break-words">
                   Minggu Ketiga
                 </h3>
               </div>

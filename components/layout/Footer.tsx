@@ -9,12 +9,12 @@ export default function Footer(): JSX.Element {
       <main class="flex flex-col items-center pt-6 border-t border-gray-400 dark:border-gray-300 layout">
         <FooterLinks />
 
-        <p class="mt-12 font-medium text-white dark:text-gray-300">
+        <p class="mt-12 font-medium text-gray-700 dark:text-gray-300">
           Reach out
         </p>
         <SocialLinks />
 
-        <p class="mt-8 text-sm text-gray-300 dark:text-gray-300">
+        <p class="mt-8 text-sm text-gray-700 dark:text-gray-300">
           © Bruce Kroeze {new Date().getFullYear()}
         </p>
       </main>
@@ -28,7 +28,7 @@ function FooterLinks() {
       {footerLinks.map(({ href, text }) => (
         <UnstyledLink
           key={href}
-          className="text-sm font-medium rounded-sm text-gray-300 dark:text-gray-300 animated-underline focus:outline-none focus-visible:ring focus-visible:ring-primary-300  hover:text-orange-500"
+          className="text-sm font-medium rounded-sm text-gray-500 dark:text-gray-300 animated-underline focus:outline-none focus-visible:ring focus-visible:ring-primary-300  hover:text-orange-500"
           href={href}
         >
           {text}
@@ -51,7 +51,7 @@ function SocialLinks() {
         >
           <SocialIcon
             icon={social.icon}
-            className="w-6 h-6 text-gray-300 align-middle transition-colors"
+            className="w-6 h-6 text-gray-500 dark:text-gray-300 align-middle transition-colors"
           />
         </UnstyledLink>
       ))}

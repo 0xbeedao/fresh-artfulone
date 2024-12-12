@@ -28,13 +28,6 @@ export default function Layout(
   return (
     <>
       <Head>
-        <link
-          rel="preload"
-          href="/fonts/inter-var-latin.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -42,11 +35,11 @@ export default function Layout(
           rel="stylesheet"
         />
       </Head>
-      <div class="layout w-full" id="full">
+      <div class="layout w-full bg-gray-100 dark:bg-gray-900" id="full">
         <HeaderDesktop />
         <main
           id="main"
-          class="px-[70px] max-w-md mx-auto xl:max-w-screen-xl w-full pt-12 xl:pt-[20px] mt-[52px]"
+          class="px-[70px] mx-auto xl:max-w-screen-xl w-full pt-12 xl:pt-[20px] mt-[72px]"
         >
           <Partial key="main" name="main">
             <Component />

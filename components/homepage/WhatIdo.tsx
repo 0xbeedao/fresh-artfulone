@@ -11,10 +11,10 @@ export default function WhatIdo() {
       <div className="w-full flex flex-col space-y-16 xl:flex-row xl:space-x-8">
         <div id="what" className="flex-1">
           <div>
-            <h1 class="hidden xl:block text-white text-xl xl:text-3xl xl:font-semibold text-center xl:text-left">
+            <h1 class="hidden xl:block dark:text-gray-100 text-gray-900 text-xl xl:text-3xl xl:font-semibold text-center xl:text-left">
               What I do
             </h1>
-            <p class="text-sm xl:text-lg mt-3 text-gray-100 leading-6 font-inter tracking-wide">
+            <p class="text-sm xl:text-lg mt-3 dark:text-gray-100 text-gray-900 leading-6 font-inter tracking-wide">
               Leading engineering for high-stakes product launches at a Fortune
               100 retailer, supporting some of the internet's most intense
               traffic spikes. Full-stack architect specializing in Java, Python,
@@ -30,19 +30,25 @@ export default function WhatIdo() {
         >
           <Card
             whatIdo={true}
-            image={<BitcoinIcon className="h-6 w-6 text-white" />}
+            image={
+              <BitcoinIcon className="h-6 w-6 dark:text-gray-100 text-gray-900" />
+            }
             title="Crypto"
             caption="Early Bitcoin adopter since $200. Built diverse DeFi projects from playful NFT games to sophisticated yield farms"
           />
           <Card
             whatIdo={true}
-            image={<BracketIcon className="h-6 w-6 text-white" />}
+            image={
+              <BracketIcon className="h-6 w-6 dark:text-gray-100 text-gray-900" />
+            }
             title="Open Source"
             caption="Former Debian maintainer and Django core contributor, speaking at the inaugural DjangoCon. Committed to open-source development, including this site"
           />
           <Card
             whatIdo={true}
-            image={<RobotIcon className="h-6 w-6 text-white" />}
+            image={
+              <RobotIcon className="h-6 w-6 dark:text-gray-100 text-gray-900" />
+            }
             title="Generative AI"
             caption="Led enterprise-wide Generative AI adoption initiatives, consulting teams on secure, ethical, and efficient implementation strategies."
           />

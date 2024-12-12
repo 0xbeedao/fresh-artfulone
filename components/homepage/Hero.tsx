@@ -20,7 +20,7 @@ function SocialLinks() {
         >
           <SocialIcon
             icon={social.icon}
-            className="text-white h-6 w-6"
+            className="dark:text-gray-200 text-gray-900 h-6 w-6"
           />
         </UnstyledLink>
       ))}
@@ -53,28 +53,33 @@ export default function Hero(): JSX.Element {
             </div>
             <div class="flex w-10/12 xl:space-x-[80px]">
               <div class="hidden xl:flex flex-col w-7/12">
-                <h4 class="text-white  text-3xl font-semibold
+                <h4 class="dark:text-gray-100 text-gray-900  text-3xl font-semibold
                  text-left">
                   Biography
                 </h4>
                 <div class="">
-                  <p class="t-sm xl:text-lg mt-3 text-gray-100 leading-6 font-inter tracking-wide">
+                  <p class="t-sm xl:text-lg mt-3 dark:text-gray-200 text-gray-900  leading-6 font-inter tracking-wide">
                     I've been a developer and artist my whole life. This site
                     has some of my work and interests.
                     <br />
                     Right now (hopefully), this site contains these passions:
                     {" "}
-                    <span class="text-orange-300">Generative AI</span> and{" "}
-                    <span class="text-sky-500">Rapid web development</span>,
+                    <span class="dark:text-orange-300 text-orange-700">
+                      Generative AI
+                    </span>{" "}
+                    and <span class="text-sky-500">Rapid web development</span>,
                     {" "}
-                    Creating <span class="text-leaf-500">Digital Art</span>{" "}
+                    Creating{" "}
+                    <span class="dark:text-leaf-500 text-green-700">
+                      Digital Art
+                    </span>{" "}
                     along with{"  "}
                     <span class="text-violet-500">Physical Art</span>.
                   </p>
                 </div>
               </div>
               <div class="flex flex-row xl:flex-col  mt-6 xl:mt-0 ">
-                <h4 class="hidden xl:block text-white  text-3xl font-semibold text-left">
+                <h4 class="hidden xl:block dark:text-gray-100 text-gray-900  text-3xl font-semibold text-left">
                   Lets connect
                 </h4>
                 <SocialLinks />

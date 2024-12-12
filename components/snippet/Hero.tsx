@@ -7,7 +7,7 @@ export default function Hero(): JSX.Element {
     <Section name="snippet" className="pt-6 xl:pt-[200px]">
       <Grid>
         <div class="col-span-full">
-          <h2 class="text-5xl font-bold text-white xl:mb-4">
+          <h2 class="text-5xl font-bold dark:text-gray-100 text-gray-900 xl:mb-4">
             Code Snippet
           </h2>
         </div>

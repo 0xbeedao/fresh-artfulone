@@ -299,7 +299,8 @@ export default function OctagonCalculator(): JSX.Element {
                     className={classNames(
                       "inline-block px-4 py-2 text-gray-600 rounded shadow",
                       {
-                        "bg-purple-600 text-white": activeTab === "dimensions",
+                        "bg-purple-600 dark:text-gray-100 text-gray-900":
+                          activeTab === "dimensions",
                         "bg-zinc-700 text-zinc-300": activeTab !== "dimensions",
                       },
                     )}
@@ -314,7 +315,8 @@ export default function OctagonCalculator(): JSX.Element {
                     className={classNames(
                       "inline-block px-4 py-2 text-gray-600 rounded shadow",
                       {
-                        "bg-purple-600 text-white": activeTab === "volumes",
+                        "bg-purple-600 dark:text-gray-100 text-gray-900":
+                          activeTab === "volumes",
                         "bg-zinc-700 text-zinc-300": activeTab !== "volumes",
                       },
                     )}
@@ -399,7 +401,7 @@ export default function OctagonCalculator(): JSX.Element {
           <div class="mt-4">
             <button
               onClick={generateSTL}
-              class="bg-purple-600 text-white px-4 py-2 rounded-lg"
+              class="bg-purple-600 dark:text-gray-100 text-gray-900 px-4 py-2 rounded-lg"
             >
               Generate STL
             </button>

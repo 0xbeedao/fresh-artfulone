@@ -21,8 +21,10 @@ export default function ItemSnippet(
   return (
     <div class="aspect-w-2 aspect-h-1 sm:aspect-w-3 sm:aspect-h-1 xl:aspect-w-5 xl:aspect-h-2">
       <div class="bg-zinc-800 px-[26px] py-6 flex flex-col w-full h-full rounded-xl">
-        <h4 class="text-white font-bold text-xl mb-4 font-sora">{title}</h4>
-        <p class="text-white text-sm">{description}.</p>
+        <h4 class="dark:text-gray-100 text-gray-900 font-bold text-xl mb-4 font-sora">
+          {title}
+        </h4>
+        <p class="dark:text-gray-100 text-gray-900 text-sm">{description}.</p>
         <div class="flex justify-between items-center mt-auto">
           <div class="flex space-x-2 ">
             {tags?.map((tag, index) => {
@@ -50,7 +52,7 @@ export default function ItemSnippet(
                 fill="#FFF615"
               />
             </svg>
-            <p class="text-white text-sm">8 Stars</p>
+            <p class="dark:text-gray-100 text-gray-900 text-sm">8 Stars</p>
           </div>
         </div>
       </div>

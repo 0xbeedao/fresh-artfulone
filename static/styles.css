@@ -1,6 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-weight: normal;
+}
+
+.inter-italic {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.inter-bold {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
 body {
   @apply font-inter;
 }

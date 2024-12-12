@@ -8,7 +8,7 @@ export default function Hero(): JSX.Element {
     <Section name="portfolio" className="pt-6 xl:pt-[200px] mb-0 xl:mb-20">
       <Grid>
         <div class="col-span-full xl:col-span-5">
-          <h1 class="text-white text-2xl xl:text-6xl text-center xl:text-left mb-4 font-normal xl:font-bold">
+          <h1 class="dark:text-gray-100 text-gray-900 text-2xl xl:text-6xl text-center xl:text-left mb-4 font-normal xl:font-bold">
             Project that i has been <strong class="text-leaf-500">done</strong>
           </h1>
           <hr class="text-gray-400 my-2 block xl:hidden" />

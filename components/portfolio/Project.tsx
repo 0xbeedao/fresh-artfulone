@@ -82,7 +82,7 @@ export default function Project({
             <h6 class="text-gray-200 font-bold mb-5 font-inter hidden xl:block lg:mt-4">
               {category}
             </h6>
-            <h3 class="text-white text-5xl mb-7 lg:mb-2 font-sora font-bold hidden xl:block">
+            <h3 class="dark:text-gray-100 text-gray-900 text-5xl mb-7 lg:mb-2 font-sora font-bold hidden xl:block">
               {title}
             </h3>
             <p class="text-gray-200 text-sm lg:text-lg font-inter leading-6 lg:leading-normal">

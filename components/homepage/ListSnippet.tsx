@@ -15,7 +15,7 @@ export default function ListSnippet(
     <Section name="list-snippet " className="mt-20">
       <Grid className="gap-y-6">
         <div class="col-span-full">
-          <h2 class="text-5xl font-bold text-white ">Code Snippet</h2>
+          <h2 class="text-5xl font-bold dark:text-gray-100 text-gray-900 ">Code Snippet</h2>
         </div>
         {postList}
         <div class="col-span-full sm:col-span-2 my-4 sm:my-0">

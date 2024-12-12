@@ -15,10 +15,11 @@ export default {
         ocean: {
           500: "#4ca9ff", // Example color
         },
+        active: "cornflowerblue",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        sora: ['Sora', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        sora: ["Sora", "sans-serif"],
       },
     },
   },

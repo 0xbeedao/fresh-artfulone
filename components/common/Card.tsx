@@ -16,7 +16,7 @@ export default function Card(
   return (
     <div
       className={classNames(
-        "relative pl-[18px] pr-4 xl:pb-[26px] bg-zinc-800 rounded-xl ml-0 xl:ml-auto text-sm",
+        "relative pl-[18px] pr-4 xl:pb-[26px] bg-zinc-200 dark:bg-zinc-800 rounded-xl ml-0 xl:ml-auto text-sm",
         {
           "max-w-[260px] xl:max-w-[655px] pt-[26px] pb-[13px]": whatIdo,
           "w-full py-6": !whatIdo,
@@ -41,7 +41,7 @@ export default function Card(
             },
           )}
         >
-          <div className="bg-zinc-800 rounded-full w-full h-full flex items-center justify-center">
+          <div className="dark:bg-zinc-800 bg-zinc-200 rounded-full w-full h-full flex items-center justify-center">
             {image}
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function Card(
         >
           <h4
             className={classNames(
-              "text-white text-sm leading-6 xl:leading-normal mt-2 xl:mt-0 text-center font-bold",
+              "dark:text-gray-100 text-gray-900 text-sm leading-6 xl:leading-normal mt-2 xl:mt-0 text-center font-bold",
               {
                 "xl:text-base xl:text-center": whatIdo,
                 "xl:text-3xl xl:mb-2 xl:text-left": !whatIdo,
@@ -64,7 +64,7 @@ export default function Card(
           </h4>
           <p
             className={classNames(
-              "text-gray-300 text-center xl:text-left text-sm leading-6 xl:leading-normal",
+              "dark:text-gray-300 text-gray-700 text-center xl:text-left text-sm leading-6 xl:leading-normal",
               { "xl:text-sm xl:text-center": whatIdo, "xl:text-lg": !whatIdo },
             )}
           >

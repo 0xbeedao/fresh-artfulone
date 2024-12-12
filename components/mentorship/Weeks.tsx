@@ -10,7 +10,7 @@ export default function Weeks(): JSX.Element {
         <div class="flex flex-col  py-5 pl-9 pr-2 col-span-full">
           <div class="bg-zinc-800 rounded-xl py-5 space-y-5">
             <div class="flex flex-col  pl-[34px] pr-1 relative ">
-              <h3 class="text-white font-semibold text-lg">
+              <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg">
                 Minggu Pertama
               </h3>
               <p class="text-gray-300 text-sm mt-4">
@@ -20,7 +20,7 @@ export default function Weeks(): JSX.Element {
               <div class="absolute top-[15%] -left-7 text-[40px]">😃</div>
             </div>
             <div class="flex flex-col  pl-[34px] pr-1 relative ">
-              <h3 class="text-white font-semibold text-lg">
+              <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg">
                 Minggu Pertama
               </h3>
               <p class="text-gray-300 text-sm mt-4">
@@ -30,7 +30,7 @@ export default function Weeks(): JSX.Element {
               <div class="absolute top-[15%] -left-7 text-[40px]">😃</div>
             </div>
             <div class="flex flex-col  pl-[34px] pr-1 relative ">
-              <h3 class="text-white font-semibold text-lg">
+              <h3 class="dark:text-gray-100 text-gray-900 font-semibold text-lg">
                 Minggu Pertama
               </h3>
               <p class="text-gray-300 text-sm mt-4">

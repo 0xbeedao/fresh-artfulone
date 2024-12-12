@@ -7,13 +7,15 @@ export default function ArtIndex({ url }: PageProps) {
   return (
     <div class="w-full px-[70px] max-w-md mx-auto xl:max-w-screen-xl xl:pt-[10px]">
       <Seo url={url.toString()} templateTitle="About" />
-      <h1 class="text-white text-3xl font-semibold mt-20">Art Projects</h1>
+      <h1 class="dark:text-gray-100 text-gray-900 text-3xl font-semibold mt-20">
+        Art Projects
+      </h1>
       <p class="mt-2">
         I do lots of different types of art, but lately I've been most
         interested in doing sculptures and castings. Lately, my favorite is to
         use concrete and glass.
       </p>
-      <div class="mt-3 bg-zinc-700 p-3 rounded-lg flex items-center">
+      <div class="mt-3 dark:bg-zinc-700 bg-zinc-300 p-3 rounded-lg flex items-center">
         <LoadAwareImage
           src="/art/glass-octagon-window-thumb.jpg"
           alt="Glass Octagon"
@@ -24,7 +26,7 @@ export default function ArtIndex({ url }: PageProps) {
           Octagonal Sculpture and Materials Calculator
         </UnstyledLink>
       </div>
-      <div class="mt-3 bg-zinc-700 p-3 rounded-lg flex items-center">
+      <div class="mt-3 dark:bg-zinc-700 bg-zinc-300  p-3 rounded-lg flex items-center">
         <LoadAwareImage
           src="/art/lotus.png"
           alt="Lotus"
@@ -35,7 +37,7 @@ export default function ArtIndex({ url }: PageProps) {
           Animated Digital Lotus
         </UnstyledLink>
       </div>
-      <div class="mt-3 bg-zinc-700 p-3 rounded-lg flex items-center">
+      <div class="mt-3 dark:bg-zinc-700 bg-zinc-300  p-3 rounded-lg flex items-center">
         <LoadAwareImage
           src="/art/lines-with-patterns.png"
           alt="Lines with Patterns"

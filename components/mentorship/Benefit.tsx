@@ -9,7 +9,7 @@ export default function Benefit(): JSX.Element {
     <Section name="benefit" className="w-full pt-12 xl:pt-28">
       <Grid>
         <div class="col-span-full xl:col-span-4 mb-20 flex flex-col">
-          <h2 class="text-white text-2xl xl:text-5xl font-bold text-center xl:text-left mb-0 xl:mb-6">
+          <h2 class="dark:text-gray-100 text-gray-900 text-2xl xl:text-5xl font-bold text-center xl:text-left mb-0 xl:mb-6">
             Keuntungan Mentorship
           </h2>
           <div class="w-full h-[400px] relative -ml-8 hidden xl:block">

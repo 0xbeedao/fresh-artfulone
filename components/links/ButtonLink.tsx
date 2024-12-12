@@ -20,7 +20,7 @@ export default function ButtonLink({
         "border border-gray-600",
         "focus:outline-none focus-visible:text-primary-400",
         {
-          "bg-dark text-white": variant === "primary",
+          "bg-dark dark:text-gray-100 text-gray-900": variant === "primary",
           "bg-white text-dark hover:bg-gray-200 hover:text-dark focus-visible:text-dark":
             variant === "secondary",
         },
