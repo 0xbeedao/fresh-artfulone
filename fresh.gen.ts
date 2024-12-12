@@ -12,7 +12,6 @@ import * as $art_octagon_calculator from "./routes/art/octagon-calculator.tsx";
 import * as $art_octagon from "./routes/art/octagon.tsx";
 import * as $art_procedural_sketch_ from "./routes/art/procedural/[sketch].tsx";
 import * as $coding_index from "./routes/coding/index.tsx";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $HeaderMobile from "./islands/HeaderMobile.tsx";
@@ -34,7 +33,6 @@ const manifest = {
     "./routes/art/octagon.tsx": $art_octagon,
     "./routes/art/procedural/[sketch].tsx": $art_procedural_sketch_,
     "./routes/coding/index.tsx": $coding_index,
-    "./routes/greet/[name].tsx": $greet_name_,
     "./routes/index.tsx": $index,
   },
   islands: {
