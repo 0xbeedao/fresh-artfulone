@@ -40,6 +40,12 @@ export default function ArtIndex({ url }: PageProps) {
         linkHref="/art/procedural/sawtooth"
         linkText="Sawtooth"
       />
+      <ProjectCard
+        imgSrc="/art/neural-claude.png"
+        imgAlt="Claude's Neural Network"
+        linkHref="/art/procedural/neural-claude"
+        linkText="A representation of Claude's Neural Network, created in collaboration with Claude.ai"
+      />
     </div>
   );
 }

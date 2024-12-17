@@ -1,7 +1,4 @@
-export interface SimpleLink {
-  href: string;
-  text: string;
-}
+import { SimpleLink, Social } from "@lib/types.d.ts";
 
 export const footerLinks: SimpleLink[] = [
   {
@@ -20,12 +17,6 @@ export const headerLinks: SimpleLink[] = [
   { href: "/coding", text: "Coding" },
   // { href: "/writing", text: "Writing" },
 ];
-
-export interface Social {
-  href: string;
-  icon: string;
-  text: string;
-}
 
 export const socials: Social[] = [
   {
