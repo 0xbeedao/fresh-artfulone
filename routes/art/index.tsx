@@ -46,6 +46,12 @@ export default function ArtIndex({ url }: PageProps) {
         linkHref="/art/procedural/neural-claude"
         linkText="A representation of Claude's Neural Network, created in collaboration with Claude.ai"
       />
+      <ProjectCard
+        imgSrc="/art/neural-chatgpt.png"
+        imgAlt="ChatGPT"
+        linkHref="/art/procedural/neural-chatgpt"
+        linkText="ChatGPT's Neural Network, created in collaboration with itself"
+      />
     </div>
   );
 }
