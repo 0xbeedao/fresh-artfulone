@@ -23,15 +23,15 @@ export default function ProcessingSketch(
   let size = "large";
 
   if (isSmallScreen) {
-    width = 300;
+    width = 600;
     height = 300;
     size = "small";
   } else if (isMediumScreen) {
-    width = 600;
+    width = 900;
     height = 600;
     size = "medium";
   } else if (isLargeScreen) {
-    width = 800;
+    width = 1000;
     height = 800;
     size = "large";
   }
@@ -40,13 +40,12 @@ export default function ProcessingSketch(
 
   const fileBaseName = sketch.split("/").pop()?.split(".")[0];
   return (
-    <div>
-      <canvas
-        id={fileBaseName}
-        width={width}
-        height={height}
-        class="justify-center items-center pt-[62px] mx-auto md:mx-0"
-      />
+    <div
+      id={fileBaseName}
+      class="w-full h-full items-center justify-center"
+      data-width={width}
+      data-height={height}
+    >
       <script type="application/javascript" src={sketch} defer />
     </div>
   );

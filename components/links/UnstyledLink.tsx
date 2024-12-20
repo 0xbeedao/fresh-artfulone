@@ -39,10 +39,5 @@ export default function UnstyledLink({
 }
 
 function isNewTabRef(href: string) {
-  console.log(
-    "is tab ref",
-    href,
-    !href.startsWith("/") && !href.startsWith("#"),
-  );
   return !href.startsWith("/") && !href.startsWith("#");
 }
