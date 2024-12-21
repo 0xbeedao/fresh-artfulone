@@ -14,6 +14,7 @@ export const footerLinks: SimpleLink[] = [
 export const headerLinks: SimpleLink[] = [
   { href: "/about", text: "About" },
   { href: "/art", text: "Art" },
+  { href: "/art/galleries", text: "Galleries" },
   { href: "/coding", text: "Coding" },
   // { href: "/writing", text: "Writing" },
 ];
