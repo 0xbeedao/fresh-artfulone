@@ -27,14 +27,14 @@ export default function FramedArt({
     "outline-[#333] dark:outline-[#23201d]";
 
   const labelClass =
-    "label mx-auto my-[2em_0_4em] w-2/3 p-2 bg-cover bg-repeat " +
+    "label mx-auto w-2/3 p-2 bg-cover bg-repeat " +
     "shadow-[5px_5px_10px_#635c51,_0_0_10px_#635c51] " +
     "dark:bg-primary-600 dark:shadow-[5px_5px_10px_#444,_0_0_10px_#444] " +
     "bg-[url(/image/textured-canvas.jpg)] " +
-    "flex flex-col p-4";
+    "flex flex-col p-4 mt-4";
 
   return (
-    <div class="mb-2">
+    <div class="flex flex-col h-full">
       <div class={frameClass}>
         <img
           src={src}
