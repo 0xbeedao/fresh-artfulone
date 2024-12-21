@@ -1,6 +1,9 @@
 import type { JSX } from "preact";
 
 type FramedArtProps = {
+  src: string;
+  height?: number;
+  width?: number;
   title: string;
   media: string;
   artist: string;
@@ -8,22 +11,39 @@ type FramedArtProps = {
 };
 
 export default function FramedArt({
+  src,
   title,
   media,
   artist,
   price,
 }: FramedArtProps): JSX.Element {
+  const frameClass = "bg-[url(/image/plaster.jpg)] " +
+    "bg-[#b0a990] dark:bg-[#1f1b12] " +
+    "p-[10%] bg-cover bg-no-repeat border-double border-6 " +
+    "border-[#635c51] dark:border-[#23201d] " +
+    "shadow-[inset_0_0_0_50px_rgba(244,240,236,0.4),_0_0_0_11px_#202030,_0_0_30px_rgba(0,0,0,0.8)] " +
+    "dark:shadow-[inset_0_0_0_50px_rgba(60,58,49,0.5),_0_0_0_11px_#23201d,_0_0_30px_rgba(0,0,0,0.8)] " +
+    "outline outline-2 mb-2" +
+    "outline-[#333] dark:outline-[#23201d]";
+
+  const labelClass =
+    "label mx-auto my-[2em_0_4em] w-2/3 p-2 bg-cover bg-repeat " +
+    "shadow-[5px_5px_10px_#635c51,_0_0_10px_#635c51] " +
+    "dark:bg-primary-600 dark:shadow-[5px_5px_10px_#444,_0_0_10px_#444] " +
+    "bg-[url(/image/textured-canvas.jpg)] " +
+    "flex flex-col p-4";
+
   return (
-    <div class="art">
-      <div class="bg-[#b0a990] dark:bg-primary-500 p-[10%] bg-cover bg-no-repeat border-double border-6 border-[#635c51] shadow-[inset_0_0_0_50px_rgba(244,240,236,0.4),_0_0_0_11px_#202030,_0_0_30px_rgba(0,0,0,0.8)] outline outline-2 outline-[#333]">
+    <div class="mb-2">
+      <div class={frameClass}>
         <img
-          src="/path/to/image.jpg"
-          alt="Art"
+          src={src}
+          alt={title}
           class="w-full h-auto block"
         />
       </div>
       <div
-        class={`label mx-auto my-[2em_0_4em] w-2/3 p-2 bg-cover bg-repeat shadow-[5px_5px_10px_#635c51,_0_0_10px_#635c51] dark:bg-primary-600 dark:shadow-[5px_5px_10px_#444,_0_0_10px_#444] bg-[url(/galleries/textured-canvas.jpg)]' : ''}`}
+        class={labelClass}
       >
         <div class="title text-lg font-bold">{title}</div>
         <div class="media leading-[1.2em] text-base">{media}</div>
@@ -33,6 +53,8 @@ export default function FramedArt({
     </div>
   );
 }
+
+// bg-[url(/image/plaster.jpg)] bg-[#b0a990] dark:bg-[#3c3a31] p-[10%] bg-cover bg-no-repeat border-double border-6 border-[#635c51] dark:border-[#23201d] shadow-[inset_0_0_0_50px_rgba(244,240,236,0.4),_0_0_0_11px_#202030,_0_0_30px_rgba(0,0,0,0.8)] dark:shadow-[inset_0_0_0_50px_rgba(60,58,49,0.4),_0_0_0_11px_#23201d,_0_0_30px_rgba(0,0,0,0.8)] outline outline-2 outline-[#333] dark:outline-[#23201d]
 
 /*
 Original CSS to change to Tailwind CSS
