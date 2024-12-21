@@ -1,4 +1,4 @@
-import UnstyledLink from "@components/links/UnstyledLink.tsx";
+import GalleryLink from "@components/links/GalleryLink.tsx";
 import Seo from "@components/Seo.tsx";
 import { artPieces } from "@config/ArtConfig.ts";
 import type { PageProps } from "$fresh/server.ts";
@@ -19,6 +19,9 @@ export default function GalleriesIndex({ url }: PageProps) {
     .map(([gallery, count]) => ({
       name: gallery,
       count,
+      pieces: artPieces.filter(piece => 
+        piece.galleries.map(g => g.toLowerCase()).includes(gallery)
+      ),
     }));
 
   return (
@@ -27,18 +30,27 @@ export default function GalleriesIndex({ url }: PageProps) {
       <div class="flex flex-col space-y-4">
         <h1 class="text-3xl font-bold">Art Galleries</h1>
         <div class="grid grid-cols-2 gap-4">
-          {galleries.map(({ name, count }) => (
-            <UnstyledLink
-              key={name}
-              href={`/art/galleries/${name}`}
-              className="p-4 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-            >
-              <div class="flex justify-between items-center">
-                <span class="capitalize">{name}</span>
-                <span class="text-gray-500">({count} pieces)</span>
-              </div>
-            </UnstyledLink>
-          ))}
+          {galleries.map(({ name, count, pieces }) => {
+            const randomPiece = pieces[Math.floor(Math.random() * pieces.length)];
+            const maxWidth = 200;
+            const scale = maxWidth / randomPiece.width;
+            const thumbnailWidth = Math.round(randomPiece.width * scale);
+            const thumbnailHeight = Math.round(randomPiece.height * scale);
+
+            return (
+              <GalleryLink
+                key={name}
+                name={name}
+                count={count}
+                thumbnail={{
+                  src: `/art/collections/${randomPiece.url}`,
+                  width: thumbnailWidth,
+                  height: thumbnailHeight,
+                  alt: randomPiece.title,
+                }}
+              />
+            );
+          })}
         </div>
       </div>
     </>
