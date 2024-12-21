@@ -7,7 +7,7 @@ import * as $_app from "./routes/_app.tsx";
 import * as $_layout from "./routes/_layout.tsx";
 import * as $about from "./routes/about.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
-import * as $art_galleries_index from "./routes/art/galleries/index.tsx";
+import * as $art_galleries_index from "./routes/art/galleries/[gallery].tsx";
 import * as $art_index from "./routes/art/index.tsx";
 import * as $art_octagon_calculator from "./routes/art/octagon-calculator.tsx";
 import * as $art_octagon from "./routes/art/octagon.tsx";
